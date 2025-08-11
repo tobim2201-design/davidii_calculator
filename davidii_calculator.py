@@ -26,10 +26,6 @@ if st.button("Vorhersage starten"):
     pred_species = lda.predict(X_new)[0]
     pred_prob = lda.predict_proba(X_new)[0]
 
-    st.subheader(f"Vorhergesagte Art: **{pred_species}**")
-    for s, p in zip(lda.classes_, pred_prob):
-        st.write(f"{s}: {p:.1%}")
-
     # 4. Plot erstellen
     fig, ax = plt.subplots(figsize=(9,6))
 
@@ -78,5 +74,6 @@ if st.button("Vorhersage starten"):
 
     plt.tight_layout()
     st.pyplot(fig)
+
 
 
