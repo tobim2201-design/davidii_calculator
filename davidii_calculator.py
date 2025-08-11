@@ -73,9 +73,10 @@ if st.button("Vorhersage starten"):
     ax.set_ylabel("Tibia length [mm]")
     ax.grid(True, linestyle='--', alpha=0.6)
     ax.legend(frameon=True, loc='best')
-
+    plt.figure(facecolor='grey')
     plt.tight_layout()
     st.pyplot(fig)
+
 
 
 
