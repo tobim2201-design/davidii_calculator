@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 
 # 1. CSV laden
-train_df = pd.read_csv("C://Users//User//Downloads//bat_measurements_extracted.csv")  # hindfoot, tibia, species
+train_df = pd.read_csv("bat_measurements_extracted.csv")  # hindfoot, tibia, species
 X_train = train_df[['hindfoot_mm', 'tibia_mm']]
 y_train = train_df['species']
 
@@ -49,3 +49,4 @@ if st.button("Vorhersage starten"):
     ax.legend(frameon=True, loc='best')
 
     st.pyplot(fig)
+
