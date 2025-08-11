@@ -69,7 +69,7 @@ if st.button("Vorhersage starten"):
     # Beschriftung neben dem neuen Punkt
     ax.text(hindfoot_new + 0.08, tibia_new,
             f"{pred_species}\n{max(pred_prob):.1%}",
-            fontsize=10, fontweight='bold', color='red')
+            fontsize=10, fontweight='bold', color='Green')
 
     ax.set_xlabel("Hind foot length [mm]")
     ax.set_ylabel("Tibia length [mm]")
@@ -78,4 +78,5 @@ if st.button("Vorhersage starten"):
 
     plt.tight_layout()
     st.pyplot(fig)
+
 
