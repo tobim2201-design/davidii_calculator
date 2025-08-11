@@ -62,13 +62,13 @@ if st.button("Vorhersage starten"):
         label='Neue Messung',
         zorder=5
     )
-    plt.figure(facecolor='grey')
+    
     # Beschriftung neben dem neuen Punkt
     ax.text(hindfoot_new + 0.08, tibia_new,
             f"{pred_species}\n{max(pred_prob):.1%}",
             fontsize=12, fontweight='bold', color='White',
             bbox ={'facecolor':'darkgreen','alpha':0.8, 'pad':10})
-    ax.set_facecolor("grey")
+    ax.set_color("grey")
     ax.set_xlabel("Hind foot length [mm]")
     ax.set_ylabel("Tibia length [mm]")
     ax.grid(True, linestyle='--', alpha=0.6)
@@ -76,6 +76,7 @@ if st.button("Vorhersage starten"):
     
     plt.tight_layout()
     st.pyplot(fig)
+
 
 
 
