@@ -58,8 +58,8 @@ if st.button("Vorhersage starten"):
     ax.scatter(
         hindfoot_new,
         tibia_new,
-        c='red',
-        marker='o',
+        c='green',
+        marker='D',
         edgecolors='black',
         s=180,
         label='Neue Messung',
@@ -78,3 +78,4 @@ if st.button("Vorhersage starten"):
 
     plt.tight_layout()
     st.pyplot(fig)
+
