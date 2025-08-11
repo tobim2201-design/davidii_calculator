@@ -38,7 +38,7 @@ if st.button("Vorhersage starten"):
 
     # Trainingspunkte mit individuellem Stil
     for species_name, group in train_df.groupby('species'):
-        style = style_map.get(species_name, {"color": "gray", "marker": "o"})
+        style = style_map.get(species_name, {"color": "brown", "marker": "o"})
         ax.scatter(
             group['hindfoot_mm'],
             group['tibia_mm'],
@@ -67,7 +67,7 @@ if st.button("Vorhersage starten"):
     ax.text(hindfoot_new + 0.08, tibia_new,
             f"{pred_species}\n{max(pred_prob):.1%}",
             fontsize=12, fontweight='bold', color='White',
-            bbox ={'facecolor':'darkgreen','alpha':0.6, 'pad':10})
+            bbox ={'facecolor':'darkgreen','alpha':0.8, 'pad':10})
 
     ax.set_xlabel("Hind foot length [mm]")
     ax.set_ylabel("Tibia length [mm]")
@@ -76,6 +76,7 @@ if st.button("Vorhersage starten"):
 
     plt.tight_layout()
     st.pyplot(fig)
+
 
 
 
