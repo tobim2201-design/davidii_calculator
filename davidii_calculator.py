@@ -62,7 +62,7 @@ if st.button("Vorhersage starten"):
         label='Neue Messung',
         zorder=5
     )
-
+    plt.figure(facecolor='grey')
     # Beschriftung neben dem neuen Punkt
     ax.text(hindfoot_new + 0.08, tibia_new,
             f"{pred_species}\n{max(pred_prob):.1%}",
@@ -73,9 +73,10 @@ if st.button("Vorhersage starten"):
     ax.set_ylabel("Tibia length [mm]")
     ax.grid(True, linestyle='--', alpha=0.6)
     ax.legend(frameon=True, loc='best')
-    plt.figure(facecolor='grey')
+    
     plt.tight_layout()
     st.pyplot(fig)
+
 
 
 
