@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 
 # 1. CSV laden
-train_df = pd.read_csv("C://Users//User//OneDrive//Desktop//davidii_calculator//bat_measurements_extracted.csv")  # hindfoot, tibia, species
+train_df = pd.read_csv("bat_measurements_extracted.csv")  # hindfoot, tibia, species
 X_train = train_df[['hindfoot_mm', 'tibia_mm']]
 y_train = train_df['species']
 
@@ -12,8 +12,8 @@ lda = LinearDiscriminantAnalysis()
 lda.fit(X_train, y_train)
 
 # --- App UI ---
-st.title("Fledermaus-Arterkennung")
-st.write("Gib die gemessenen Werte ein, um die Artvorhersage zu erhalten.")
+st.title("*Myotis davidii* oder *Myotis mystacinus*")
+st.write("Artvorhersage durch LDA mittels 2 Parametern.")
 
 # 2. Eingaben
 hindfoot_new = st.number_input("Hinterfußlänge (mm)", min_value=0.0, step=0.1)
@@ -62,3 +62,4 @@ if st.button("Vorhersage starten"):
     ax.legend(frameon=True, loc='best')
 
     st.pyplot(fig)
+
