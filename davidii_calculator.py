@@ -12,7 +12,7 @@ lda = LinearDiscriminantAnalysis()
 lda.fit(X_train, y_train)
 
 # --- App UI ---
-st.title("Fledermaus-Arterkennung")
+st.title("Myotis davidii oder doch Myotis mystacinus")
 st.write("Gib die gemessenen Werte ein, um die Artvorhersage zu erhalten.")
 
 # 2. Eingaben
@@ -49,4 +49,5 @@ if st.button("Vorhersage starten"):
     ax.legend(frameon=True, loc='best')
 
     st.pyplot(fig)
+
 
