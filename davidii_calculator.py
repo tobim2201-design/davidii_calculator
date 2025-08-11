@@ -67,7 +67,7 @@ if st.button("Vorhersage starten"):
     ax.text(hindfoot_new + 0.08, tibia_new,
             f"{pred_species}\n{max(pred_prob):.1%}",
             fontsize=12, fontweight='bold', color='Black',
-            bbox ={'facecolor':'green','alpha':0.6, 'pad':20})
+            bbox ={'facecolor':'green','alpha':0.6, 'pad':10})
 
     ax.set_xlabel("Hind foot length [mm]")
     ax.set_ylabel("Tibia length [mm]")
@@ -76,6 +76,7 @@ if st.button("Vorhersage starten"):
 
     plt.tight_layout()
     st.pyplot(fig)
+
 
 
 
